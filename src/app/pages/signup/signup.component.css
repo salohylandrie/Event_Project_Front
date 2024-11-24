@@ -1,0 +1,29 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+#sign{
+    box-shadow:  01px 05px 50px 10px rgb(119, 159, 119);
+   
+    border-radius: 10px;
+   height: 450px;
+
+  }
+  
+
+  #text_sign{
+    margin-left: 178px;
+}  
+  

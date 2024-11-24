@@ -1,0 +1,39 @@
+<form (ngSubmit)="saveEvenement()">
+  <div>
+    <label for="titre_Even">Titre</label>
+    <input id="titre_Even" [(ngModel)]="evenement.titre_Even" name="titre_Even" required />
+  </div>
+
+  <div>
+    <label for="descri_Even">Description</label>
+    <textarea id="descri_Even" [(ngModel)]="evenement.descri_Even" name="descri_Even" required></textarea>
+  </div>
+
+  <input 
+  id="date" 
+  type="datetime-local" 
+  step="1" 
+  [(ngModel)]="evenement.date" 
+  name="date" 
+  required
+/>
+
+  
+
+  <div>
+    <label for="lieu_Even">Lieu</label>
+    <input id="lieu_Even" [(ngModel)]="evenement.lieu_Even" name="lieu_Even" required />
+  </div>
+
+  <div>
+    <label for="capacite_Even">Capacité</label>
+    <input type="number" id="capacite_Even" [(ngModel)]="evenement.capacite_Even" name="capacite_Even" required />
+  </div>
+
+  <div>
+    <label for="categorie_Even">Catégorie</label>
+    <input id="categorie_Even" [(ngModel)]="evenement.categorie_Even" name="categorie_Even" required />
+  </div>
+
+  <button type="submit">Sauvegarder</button>
+</form>
