@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { tap } from 'rxjs/operators';
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -40,6 +41,10 @@ export class AuthService {
   getRoles(): string[] {
     const roles = localStorage.getItem('roles');
     return roles ? JSON.parse(roles) : [];
+  }
+  getToken() {
+    const token = localStorage.getItem('token');
+    return token ? token : ''; // Retourner une chaîne vide si le token est absent
   }
 
   isLoggedIn(): boolean {

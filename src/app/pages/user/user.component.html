@@ -1,216 +1,205 @@
 
 <div [ngClass]="status ? 'toggled' : ''" class="d-flex" id="wrapper">
 
-    <div  id="sidebar-wrapper">
-        <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
-                class="fas fa-user-secret me-2"></i>Admin</div>
-        <div class="list-group list-group-flush my-3">
-  
-            <a  class="list-group-item list-group-item-action bg-transparent  fw-bold"><i
-                class="fas fa-power-off me-2"></i>ACCUEIL</a>
-                    <a  class="list-group-item list-group-item-action bg-transparent  fw-bold"><i
-                        class="fas fa-power-off me-2"></i>Résultats finaux</a>
-                        <a  class="list-group-item list-group-item-action bg-transparent  fw-bold"><i
-                            class="fas fa-power-off me-2"></i>Résultats des candidats</a>
-                        
-            <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold" (click)="logout()"><i
-                    class="fas fa-power-off me-2"  ></i>Déconnexion</a>
-                    
+  <div  id="sidebar-wrapper">
+      <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
+              class="fas fa-user-secret me-2"></i>Admin</div>
+      <div class="list-group list-group-flush my-3">
+
+          <a  class="list-group-item list-group-item-action bg-transparent  fw-bold"><i
+              class="fas fa-power-off me-2"></i>ACCUEIL</a>
                   
-        </div>
-    </div>
-  
-    
-  
-    <div id="page-content-wrapper">
-  
-  
-  
-        
-        <nav class="navbar navbar-expand-lg navbar-light  py-4 px-4" id="tete">
-          <div class="d-flex align-items-center">
-            <a href="/candidat-list-route" class="list-group-item bg-transparent second-text fw-bold me-3">
-                <i class="fas fa-user-tie"></i> Candidat
-            </a>
-            <a href="/bureau-list-route" class="list-group-item bg-transparent second-text fw-bold me-3">
-                <i class="fas fa-building"></i> Bureau de vote
-            </a>
-            <a href="/fokotany-list-route" class="list-group-item bg-transparent second-text fw-bold me-3">
-                <i class="fas fa-map-marker-alt"></i> Fokotany
-            </a>
-            <a href="/emplacement-list-route" class="list-group-item bg-transparent second-text fw-bold me-3">
-                <i class="fas fa-location-arrow"></i> Emplacement
-            </a>
-            <a href="/listecandidat-list-route" class="list-group-item bg-transparent second-text fw-bold me-3">
-                <i class="fas fa-list"></i> Liste
-            </a>
-            <a href="/registre-list-route" class="list-group-item bg-transparent second-text fw-bold me-3">
-                <i class="fas fa-book"></i> Registre
-            </a>
-        </div>
-  
-  
-  
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-           
-        
-          </nav>
-  
-          <div class="d-flex align-items-center" id="titre">
-                  
-            <h2 class="fs-2 m-0"></h2>
-        </div>
-  
-        <div class="container-fluid px-4">
-            <div class="row g-3 my-2">
-                <div class="col-md-3">
-                    <div class=>
-                        <div>
-                            <h3 class="fs-2"></h3>
-                            <p class="fs-5"></p>
-                        </div>
-                        <i class=></i>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class=>
-                        <div>
-                            <h3 class="fs-2"></h3>
-                            <p class="fs-5"></p>
-                        </div>
-                        <i
-                            class=></i>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class=>
-                        <div>
-                            <h3 class="fs-2"></h3>
-                            <p class="fs-5"></p>
-                        </div>
-                        <i class=></i>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class=>
-                        <div>
-                            <h3 class="fs-2"></h3>
-                            <p class="fs-5"></p>
-                        </div>
-                        <i class=></i>
-                    </div>
-                </div>
-            </div>
-           
-  
-  
-  <!-- rgb(209, 207, 207); -->
-  
-  
-  
-  
-  
-  
-  
-  
-  <div class="container mt-5" id="box">
-    <div class="card" id="box2">
-      <div class="card-header">
-        <h4>Listes des utilisateurs
-          <a routerLink="/registre-create-route" class="btn btn-success float-end"> + NOUVEAU</a>
-        </h4>
+                      
+              <a href="/login" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold" (click)="logout()"><i
+                class="fas fa-power-off me-2"  ></i>Déconnexion</a>
       </div>
-      <div class="card-body">
-        <div class="row" id="search">
-          <div class="col-md-6">
-            <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-prepend" >
-                  <span  class="input-group-text">Recherche:</span>
-                </div>
-                <input type="text" class="form-control" >
+  </div>
+
+  
+
+  <div id="page-content-wrapper">
+
+
+
+      
+      <nav class="navbar navbar-expand-lg navbar-light  py-4 px-4" id="tete">
+        <div class="d-flex align-items-center">
+          <a href="/admin" class="list-group-item bg-transparent second-text fw-bold me-3">
+              <i class="fas fa-user-tie"></i> Evènement
+          </a>
+          <a href="/bureau-list-route" class="list-group-item bg-transparent second-text fw-bold me-3">
+              <i class="fas fa-building"></i> 
+          </a>
+          <a href="/fokotany-list-route" class="list-group-item bg-transparent second-text fw-bold me-3">
+              <i class="fas fa-map-marker-alt"></i> 
+          </a>
+          <a href="/emplacement-list-route" class="list-group-item bg-transparent second-text fw-bold me-3">
+              <i class="fas fa-location-arrow"></i>
+          </a>
+          <a href="/listecandidat-list-route" class="list-group-item bg-transparent second-text fw-bold me-3">
+              <i class="fas fa-list"></i> 
+          </a>
+          <a href="/registre-list-route" class="list-group-item bg-transparent second-text fw-bold me-3">
+              <i class="fas fa-book"></i> 
+          </a>
+      </div>
+
+
+
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+         
+      
+        </nav>
+
+        <div class="d-flex align-items-center" id="titre">
+                
+          <h2 class="fs-2 m-0"></h2>
+      </div>
+
+      <div class="container-fluid px-4">
+          <div class="row g-3 my-2">
+              <div class="col-md-3">
+                  <div class=>
+                      <div>
+                          <h3 class="fs-2"></h3>
+                          <p class="fs-5"></p>
+                      </div>
+                      <i class=></i>
+                  </div>
               </div>
+              <div class="col-md-3">
+                  <div class=>
+                      <div>
+                          <h3 class="fs-2"></h3>
+                          <p class="fs-5"></p>
+                      </div>
+                      <i
+                          class=></i>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class=>
+                      <div>
+                          <h3 class="fs-2"></h3>
+                          <p class="fs-5"></p>
+                      </div>
+                      <i class=></i>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class=>
+                      <div>
+                          <h3 class="fs-2"></h3>
+                          <p class="fs-5"></p>
+                      </div>
+                      <i class=></i>
+                  </div>
+              </div>
+          </div>
+         
+
+
+<!-- rgb(209, 207, 207); -->
+
+
+
+
+<div id="crud">
+<!-- The toolbar of our app -->
+<mat-toolbar id="mattool">
+  <span>Listes des évènements </span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button style="background-color: green;" (click)="openAddEditEmployeeDialog()">ADD EVENEMENT</button>
+ </mat-toolbar>
+ <!-- The body of our app -->
+ <div class="main-body">
+     <!-- The filter section -->
+     <mat-form-field aria-haspopup="outline">
+       <mat-label>Filter</mat-label>
+       <input matInput (keyup)="applyFilter($event)" placeholder="i.e David Smith" #input>
+     </mat-form-field>
+     <!-- The employee details table -->
+     <div class="table-container">
+       <table mat-table [dataSource]="dataSource" matSort>
+         <ng-container matColumnDef="id">
+           <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+           <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+         </ng-container>
+         <ng-container matColumnDef="user_id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> User </th>
+          <td mat-cell *matCellDef="let row"> {{row.user_id}}</td>
+        </ng-container>
+         <ng-container matColumnDef="evenement_id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> evenement </th>
+          <td mat-cell *matCellDef="let row"> {{row.evenement_id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="date_inscri">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Date </th>
+          <td mat-cell *matCellDef="let row"> {{row.date_inscri}}</td>
+         </ng-container>
+        
+         <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> email </th>
+          <td mat-cell *matCellDef="let row"> {{row.email}}</td>
+        </ng-container>
+         
+        
+        
+          <ng-container matColumnDef="action">
+           <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+           <td mat-cell *matCellDef="let row">
+            <i 
+             class="fas fa-edit text-primary action-icon small-icon" 
+             title="Éditer" 
+             (click)="openEditForm(row)" >
+           </i>
+          <i class="action-icon" class="fas fa-trash-alt text-danger action-icon small-icon" 
+           title="Supprimer" (click)="showDeleteModal( row.id)"></i>
+         
+       
+         
+           </td>
+         </ng-container>
+  
+        
+         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+         <!-- This row will be shown when there is no matching data. -->
+         <tr class="mat-row" *matNoDataRow>
+           <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+         </tr>
+       </table>
+
+
+       <div class="modal" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Confirmation de suppression</h5>
+              <button type="button" class="close" >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Êtes-vous sûr de vouloir supprimer cet évènement ?
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger" (click)="deleteEvenement(selectedEventId); hideDeleteModal()">OUI</button>
+              <button type="button" class="btn btn-secondary"  (click)="hideDeleteModal()">NON</button>
             </div>
           </div>
         </div>
-        <br>
-        <table class="invisible-table">
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Nom utilisateur</th>
-              <th>Mot de passe</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Utilisateur1</td>
-              <td>*******</td>
-              <td>
-                <button class="btn btn-danger btn-sm">Supprimer</button>
-                <button class="btn btn-primary btn-sm">Edit</button>
-                <button class="btn btn-success btn-sm">Voir</button>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Utilisateur2</td>
-              <td>*******</td>
-              <td>
-                <button class="btn btn-danger btn-sm">Supprimer</button>
-                <button class="btn btn-primary btn-sm">Edit</button>
-                <button class="btn btn-success btn-sm">Voir</button>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Utilisateur3</td>
-              <td>*******</td>
-              <td>
-                <button class="btn btn-danger btn-sm">Supprimer</button>
-                <button class="btn btn-primary btn-sm">Edit</button>
-                <button class="btn btn-success btn-sm">Voir</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        
-      
-      
-      </div>
-    </div>
-  </div>
-  
-  
-  
-  
-  <div class="modal" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Confirmation de suppression</h5>
-          <button type="button" class="close" >
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
-        <div class="modal-body">
-          Êtes-vous sûr de vouloir supprimer ce candidat ?
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-danger">OUI</button>
-          <button type="button" class="btn btn-secondary" >NON</button>
-        </div>
-      </div>
-    </div>
-    </div>
-    
   
-  
+       <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+     </div>
+   </div>
+
   </div>

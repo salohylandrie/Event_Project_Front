@@ -109,102 +109,100 @@
 
 
 
-
-
-
-
-<div class="container mt-5" id="box">
-  <div class="card" id="box2">
-    <div class="card-header">
-      <h4>Listes des utilisateurs
-        <a [routerLink]="['/add']">
-          <i class="fas fa-plus float-end" style="font-size: 1.8rem; color: green;"></i>
-        </a>
+<div id="crud">
+<!-- The toolbar of our app -->
+<mat-toolbar id="mattool">
+  <span>Listes des évènements </span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button style="background-color: green;" (click)="openAddEditEmployeeDialog()">ADD EVENEMENT</button>
+ </mat-toolbar>
+ <!-- The body of our app -->
+ <div class="main-body">
+     <!-- The filter section -->
+     <mat-form-field aria-haspopup="outline">
+       <mat-label>Filter</mat-label>
+       <input matInput (keyup)="applyFilter($event)" placeholder="i.e David Smith" #input>
+     </mat-form-field>
+     <!-- The employee details table -->
+     <div class="table-container">
+       <table mat-table [dataSource]="dataSource" matSort>
+         <ng-container matColumnDef="id">
+           <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+           <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+         </ng-container>
+         <ng-container matColumnDef="titre_Even">
+           <th mat-header-cell *matHeaderCellDef mat-sort-header> Titre </th>
+           <td mat-cell *matCellDef="let row"> {{row.titre_Even}}</td>
+         </ng-container>
+          <ng-container matColumnDef="descri_Even">
+           <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+           <td mat-cell *matCellDef="let row"> {{row.descri_Even}}</td>
+         </ng-container>
+          <ng-container matColumnDef="lieu_Even">
+           <th mat-header-cell *matHeaderCellDef mat-sort-header> Lieu </th>
+           <td mat-cell *matCellDef="let row"> {{row.lieu_Even}}</td>
+         </ng-container>
+          <ng-container matColumnDef="date">
+           <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+           <td mat-cell *matCellDef="let row"> {{row.date}}</td>
+         </ng-container>
+          <ng-container matColumnDef="capacite_Even">
+           <th mat-header-cell *matHeaderCellDef mat-sort-header> Capacité </th>
+           <td mat-cell *matCellDef="let row"> {{row.capacite_Even}}</td>
+         </ng-container>
+          <ng-container matColumnDef="categorie_Even">
+           <th mat-header-cell *matHeaderCellDef mat-sort-header>Catégorie </th>
+           <td mat-cell *matCellDef="let row"> {{row.categorie_Even}}</td>
+          </ng-container>
+          <ng-container matColumnDef="action">
+           <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+           <td mat-cell *matCellDef="let row">
+            <i 
+             class="fas fa-edit text-primary action-icon small-icon" 
+             title="Éditer" 
+             (click)="openEditForm(row)" >
+           </i>
+          <i class="action-icon" class="fas fa-trash-alt text-danger action-icon small-icon" 
+           title="Supprimer" (click)="showDeleteModal( row.id)"></i>
+         
+       
+         
+           </td>
+         </ng-container>
+  
         
-     
-        
-      </h4>
-    </div>
-    <div class="card-body">
-      <div class="row" id="search">
-        <div class="col-md-6">
-          <div class="form-group">
-            <div class="input-group">
-              <div class="input-group-prepend" >
-                <span  class="input-group-text">Recherche:</span>
-              </div>
-              <input type="text" class="form-control" >
+         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+         <!-- This row will be shown when there is no matching data. -->
+         <tr class="mat-row" *matNoDataRow>
+           <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+         </tr>
+       </table>
+
+
+       <div class="modal" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Confirmation de suppression</h5>
+              <button type="button" class="close" >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Êtes-vous sûr de vouloir supprimer cet évènement ?
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger" (click)="deleteEvenement(selectedEventId); hideDeleteModal()">OUI</button>
+              <button type="button" class="btn btn-secondary"   (click)="hideDeleteModal()">NON</button>
             </div>
           </div>
         </div>
-      </div>
-      <br>
-      <table class="invisible-table">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Titre</th>
-            <th>Description</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let evenements of evenement">
-            <td>{{ evenements.id }}</td>
-            <td>{{ evenements.titre_Even }}</td>
-            <td>{{ evenements.descri_Even }}</td>
-            <td>
-              <i 
-                class="fas fa-trash-alt text-danger action-icon small-icon" 
-                title="Supprimer" 
-                (click)="deleteEvenement(evenements.id)">
-              </i>
-              <i 
-                class="fas fa-edit text-primary action-icon small-icon" 
-                title="Éditer" 
-                [routerLink]="['/edit', evenements.id]">
-              </i>
-              <i 
-                class="fas fa-eye text-success action-icon small-icon" 
-                title="Voir" 
-                (click)="viewEvenement(evenements)">
-              </i>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      
-      
-      
-    
-    
-    </div>
-  </div>
-</div>
-
-
-
-
-<div class="modal" id="myModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Confirmation de suppression</h5>
-        <button type="button" class="close" >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Êtes-vous sûr de vouloir supprimer ce candidat ?
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-danger">OUI</button>
-        <button type="button" class="btn btn-secondary" >NON</button>
-      </div>
-    </div>
-  </div>
-  </div>
+        </div>
   
+       <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+     </div>
+   </div>
 
-
-</div>
+  </div>

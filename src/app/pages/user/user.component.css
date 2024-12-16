@@ -1,96 +1,169 @@
-#box{
-    box-shadow:  01px 05px 50px 10px rgb(119, 159, 119);
-   
-    border-radius: 10px;
-    width: 80%;
-    margin-top: 1000px;
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-form-field {
+width: 100%;
+margin: auto;
+}
+.main-body {
+max-width: 80%;
+margin: 20px auto;
+}
+.action-icon:hover {
+opacity: 0.8;
+cursor: pointer;
+}
 
-  }
-  
-  #box2{
-  margin-left: -12px;
-  margin-right: -12px;
-  
-  }
-  
-  #search{
-    margin-left: 720px;
-    margin-right: -300px;
-  
-  }
-  
-  #sidebar-wrapper{
-    box-shadow:  01px 05px 50px 10px rgb(119, 159, 119);
-  border-radius: 10px; 
+#mattool{
   background-color: darkcyan;
-  border-width: 100cap;
-margin-bottom: -300px;
-margin-right: 100;
+  border-radius: 10px;
+}
+#crud{
+  box-shadow:  01px 05px 50px 10px rgb(119, 159, 119);
+ 
+  border-radius: 10px;
+  position: fixed;
+  width: 66%;
+  margin-left: 145px;
+}
+
+.small-icon {
+  font-size: 1rem; /* Réduire la taille des icônes */
+}
+
+.action-icon {
+  cursor: pointer;
+  margin: 0 5px; /* Espacement entre les icônes */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.action-icon:hover {
+  transform: scale(1.1); /* Animation légère au survol */
+}
+
+
+
+
+
+
+
+#box{
+  box-shadow:  01px 05px 50px 10px rgb(119, 159, 119);
+ 
+  border-radius: 10px;
+  width: 80%;
+  margin-top: 1000px;
+
+}
+
+.action-icon:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#box2{
+margin-left: -12px;
+margin-right: -12px;
+
+}
+
+#search{
+  margin-left: 720px;
+  margin-right: -300px;
+
+}
+
+#sidebar-wrapper{
+  box-shadow:  01px 05px 50px 10px rgb(119, 159, 119);
+border-radius: 10px; 
+background-color: darkcyan;
+border-width: 100cap;
+margin-bottom: -1000px;
 border-top-left-radius: 0%;
 border-top-right-radius: 0%;
 border-bottom-right-radius: 0%;
-
-  
-  }
-  
-  #tete{
-  box-shadow:  10px 10px 50px 10px rgb( 142, 141);
-  height: 12%;
-  width: 1330px;
-  border-radius: 10px;
-  border-top-left-radius: 0%;
-  border-top-right-radius: 0%;
-  border-bottom-left-radius: 0;
-  background-color: darkcyan;
-  }
-  
-  
-  #titre{
-     margin-left: 2.5%;
-     margin-top: 1.7%;
-     margin-bottom: -3%;
-  }
-  #text{
-  margin-top: 30%;
-  }
-
-  #wrapper{
-    position: fixed;
-  }
+width: 200px;
 
 
+}
+
+#tete{
+box-shadow:  10px 10px 50px 10px rgb( 142, 141);
+height: 12%;
+width: 1337px;
+border-radius: 10px;
+border-top-left-radius: 0%;
+border-top-right-radius: 0%;
+border-bottom-left-radius: 0%;
+
+background-color: darkcyan;
 
 
-  
+}
 
-  .invisible-table {
-    border-collapse: collapse; /* Supprime les bordures par défaut */
-    width: 100%; /* S'étend sur toute la largeur */
-  }
-  
-  .invisible-table th,
-  .invisible-table td {
-    border: none; /* Supprime les bordures des cellules */
-    padding: 10px 15px; /* Ajoute un espace intérieur pour une meilleure lisibilité */
-    text-align: left; /* Aligne le texte à gauche */
-  }
-  
-  .invisible-table th {
-    font-weight: bold; /* Rends les en-têtes plus visibles */
-    color: #333; /* Couleur de texte */
-    background-color: #f8f9fa; /* Couleur d'arrière-plan claire */
-  }
-  
-  .invisible-table tr:nth-child(even) {
-    background-color: #f2f2f2; /* Couleur alternative pour les lignes */
-  }
-  
-  .invisible-table tr:hover {
-    background-color: #e9ecef; /* Met en évidence une ligne au survol */
-  }
-  
-  .invisible-table td:last-child {
-    display: flex; /* Pour aligner les boutons d'action côte à côte */
-    gap: 10px; /* Espacement entre les boutons */
-  }
-  
+
+#titre{
+   margin-left: 2.5%;
+   margin-top: 1.7%;
+   margin-bottom: -3%;
+}
+#text{
+margin-top: 30%;
+}
+
+#wrapper{
+  position: fixed;
+}
+
+
+
+
+
+
+/* Classe personnalisée pour réduire la taille des icônes */
+.small-icon {
+  font-size: 1rem; /* Réduire la taille des icônes */
+}
+
+.action-icon {
+  cursor: pointer;
+  margin: 0 5px; /* Espacement entre les icônes */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.action-icon:hover {
+  transform: scale(1.1); /* Animation légère au survol */
+}
+
+.invisible-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.invisible-table th,
+.invisible-table td {
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.invisible-table th {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+.invisible-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.invisible-table tr:hover {
+  background-color: #e9ecef;
+}
+
+.invisible-table td:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacement horizontal entre les icônes */
+}
+
+
+
